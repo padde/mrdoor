@@ -1,0 +1,34 @@
+<html lang="de">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <meta name="description" content="Hier kann man sehen, ob der Maschinenraum (Weimar) offen ist." 
+  <meta name="keywords" content="Maschinenraum, MR, Tür, Weimar, Thüringen, M18, iPhone, App, Webapp, hackerspace, door, weimar, thuringia" />
+  <title>MR Door Status</title>
+  
+  <!-- Libraries -->
+  <script type="text/javascript" charset="utf-8" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="jquery.easydate-0.2.4.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="jquery.color.js"></script>
+  
+  <!-- Actual Application Code -->
+  <script type="text/javascript" charset="utf-8" src="main.js"></script>
+  <link rel="stylesheet" href="main.css" type="text/css" charset="utf-8"/>
+  
+  <!-- iPhone stuff -->
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+</head>
+<body>
+
+<div id="content">
+  <p>Der Maschinenraum ist <span id="status">…</span></p>
+  <p id="checked"><span class="easydate">Nie</span> überprüft</p>
+  <p id="error">&nbsp;</p>
+  <a href="#" id="update-button">Jetzt überprüfen</a>
+</div>
+
+</body>
+</html>
+
