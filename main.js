@@ -1,5 +1,3 @@
-var open = null;
-
 var easydate_options = {
   locale: { 
     "future_format": "%s %t", 
