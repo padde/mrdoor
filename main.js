@@ -33,14 +33,12 @@ update = function(){
     type: 'GET',
     dataType: 'json',
     timeout: 1000,
-    url: 'http://twitter.com/statuses/user_timeline/mr_door_status.json?callback=?&count=1',
-    success: function(tweets) {
-      var text = tweets[0].text;
-      var date = new Date( tweets[0].created_at );
+    url: 'http://api.maschinenraum.tk/status.json',
+    success: function(room) {
       var now  = new Date;
-      var num  = text.split("No. ")[1];
-  
-      if ( text.match(/.*offen.*/) ) {
+
+      console.log(room);
+      if ( room.open ) {
         $('#status').html('offen');
         $('body').animate({backgroundColor:'#E7F5BC'}, 500);
       } else {
