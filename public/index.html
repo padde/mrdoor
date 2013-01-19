@@ -1,0 +1,59 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="description" content="Hier kann man sehen, ob der Maschinenraum (Weimar) offen ist." />
+  <meta name="keywords" content="Maschinenraum, MR, Tür, Weimar, Thüringen, M18, iPhone, App, Webapp, hackerspace, door, weimar, thuringia" />
+
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png"/>
+
+  <link rel="stylesheet" href="/stylesheets/reset.css" type="text/css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="/stylesheets/main.css" type="text/css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.css" type="text/css" media="screen" charset="utf-8">
+
+  <title>MR Door</title>
+</head>
+<body>
+  <div id="content">
+    <p>Der Maschinenraum ist <span id="status">…</span></p>
+    <p id="checked"><span class="easydate">Nie</span> überprüft</p>
+    <p id="error">&nbsp;</p>
+    <a href="#" id="update-button"><i class="icon-repeat"></i> Jetzt überprüfen</a>
+  </div>
+
+  <div id="extra">
+    <p>
+      <a href="http://github.com/padde/mrdoor">
+        <i class="icon-github-alt"></i>
+        Fork me on Github
+      </a>
+    </p>
+    
+    <p>
+      <a href="http://maschinenraum.tk">
+        <i class="icon-external-link"></i>
+        Visit maschinenraum.tk
+      </a>
+    </p>
+  </div>
+
+  <script type="text/javascript" charset="utf-8" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/javascripts/jquery.easydate-0.2.4.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/javascripts/jquery.color.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/javascripts/spin.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/javascripts/main.js"></script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-28051863-1']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</body>
+</html>
