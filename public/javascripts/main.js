@@ -26,6 +26,7 @@ easydate_options = {
 
 show_error = function( error_message ) {
   $('#error').html(error_message);
+  $('#update-button i').removeClass('icon-spin')
 }
 
 set_status = function( status_message ) {
@@ -43,7 +44,7 @@ update_status = function( room ) {
   } else {
     set_status('<i class="icon-remove-sign icon-red"></i> geschlossen')
   }
-  $('#update-button i').removeClass('icon-spin')
+
   show_error('&nbsp;')
   set_time( new Date )
 }
