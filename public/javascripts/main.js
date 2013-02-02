@@ -50,7 +50,6 @@ update_status = function( room ) {
 }
 
 update = function(){
-  set_status('…')
   $('#update-button i').addClass('icon-spin')
 
   jQuery.ajax({
