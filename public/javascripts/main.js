@@ -50,10 +50,6 @@ set_status = function( status_message ) {
   $('#status').html(status_message)
 }
 
-set_color = function( color ) {
-  $('body').animate({ backgroundColor: color }, 500)
-}
-
 set_time = function( time ) {
   $('#checked .easydate').attr('title', time.toUTCString())
   $('.easydate').easydate(easydate_options)
@@ -62,10 +58,8 @@ set_time = function( time ) {
 update_status = function( room ) {
   if ( room.open ) {
     set_status('<i class="icon-ok-sign icon-large icon-green"></i> offen')
-    set_color('#F1FFEA')
   } else {
     set_status('<i class="icon-remove-sign icon-large icon-red"></i> geschlossen')
-    set_color('#FEDCDD')
   }
   show_error('&nbsp;')
   set_time( new Date )
@@ -75,8 +69,6 @@ update = function(){
   set_status('<div id="spinner"></div>')
   var target = document.getElementById('spinner');
   var spinner = new Spinner(spinner_options).spin(target);
-
-  set_color('#f5f5f5')
 
   jQuery.ajax({
     type:     'GET',
