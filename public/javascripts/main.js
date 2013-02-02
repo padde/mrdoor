@@ -82,7 +82,7 @@ update = function(){
     type:     'GET',
     dataType: 'json',
     timeout:  1000,
-    url:      'http://mrdoor.paddd.de/status.json',
+    url:      'http://api.maschinenraum.tk/status.json',
     success:  function(res){ update_status(res) },
     error:    function(res){ show_error('Keine Verbindung') }
   })
