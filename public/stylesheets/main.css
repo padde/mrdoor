@@ -67,8 +67,9 @@ a {
   font-size: 0.8em;
 }
 
-#extra p {
-  margin-top: 1em;
+#extra a {
+  display: inline-block;
+  padding: 1em;
 }
 
 .icon-green {
