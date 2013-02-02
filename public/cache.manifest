@@ -15,3 +15,6 @@ CACHE MANIFEST
 /stylesheets/font-awesome.css
 /stylesheets/main.css
 /stylesheets/reset.css
+
+NETWORK:
+*
