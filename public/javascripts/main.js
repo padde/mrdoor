@@ -42,24 +42,10 @@ update = function() {
   })
 }
 
-lock_portrait = function(e) {
-  if (window.orientation == 90) {
-    $("body").css('-webkit-transform', 'rotate(-90deg)')
-  } else if (window.orientation == -90) {
-    $("body").css('-webkit-transform', 'rotate(90deg)')
-  } else {
-    $("body").css('-webkit-transform', 'rotate(0deg)')
-  }
-}
-
 $(document).ready(function(){
   // disable scrolling
   $('body').on('touchmove', false)
   
-  // lock to portrait mode
-  $(window).on('orientationchange', lock_portrait)
-  $(window).setTimeout(lock_portrait, 0);
-
   update()
   setInterval(update, 5*60*1000)
 });
