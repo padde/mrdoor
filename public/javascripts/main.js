@@ -29,7 +29,7 @@ update_status = function( room ) {
   set_since( new Date( room.lastchange * 1000 ) )
 }
 
-update = function(){
+update = function() {
   $('#update-button i').addClass('icon-spin')
 
   jQuery.ajax({
@@ -42,8 +42,18 @@ update = function(){
   })
 }
 
+lock_portrait = function(e) {
+  var portrait = (window.orientation % 180 == 0)
+  $("body > div").css("-webkit-transform", !portrait ? "rotate(-90deg)" : "")
+}
+
 $(document).ready(function(){
+  // disable scrolling
   $('body').on('touchmove', false)
+  
+  // lock to portrait mode
+  $(window).on('orientationchange', lock_portrait)
+  $(window).setTimeout(lock_portrait, 0);
 
   update()
   setInterval(update, 5*60*1000)
