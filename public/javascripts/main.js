@@ -1,29 +1,3 @@
-easydate_options = {
-  locale: { 
-    "future_format": "%s %t", 
-    "past_format": "%s %t", 
-    "second": "Sekunde", 
-    "seconds": "Sekunden", 
-    "minute": "Minute", 
-    "minutes": "Minuten", 
-    "hour": "Stunde", 
-    "hours": "Stunden", 
-    "day": "Tag", 
-    "days": "Tage", 
-    "week": "Woche", 
-    "weeks": "Wochen", 
-    "month": "Monat", 
-    "months": "Monate", 
-    "year": "Jahr", 
-    "years": "Jahre", 
-    "yesterday": "Gestern", 
-    "tomorrow": "Morgen", 
-    "now": "Gerade eben", 
-    "ago": "Vor", 
-    "in": "In" 
-  }
-}
-
 show_error = function( error_message ) {
   $('#error').html(error_message);
   $('#update-button i').removeClass('icon-spin')
@@ -35,14 +9,14 @@ set_status = function( status_message ) {
 
 set_time = function( time ) {
   $('#checked .easydate').attr('title', time.toUTCString())
-  $('.easydate').easydate(easydate_options)
+  $('.easydate').easydate()
 }
 
 update_status = function( room ) {
   if ( room.open ) {
-    set_status('<i class="icon-ok-sign icon-green"></i> offen')
+    set_status('<i class="icon-ok-sign icon-green"></i> open')
   } else {
-    set_status('<i class="icon-remove-sign icon-red"></i> geschlossen')
+    set_status('<i class="icon-remove-sign icon-red"></i> closed')
   }
 
   show_error('&nbsp;')
@@ -58,7 +32,7 @@ update = function(){
     timeout:  1000,
     url:      'http://api.maschinenraum.tk/status.json',
     success:  function(res){ update_status(res) },
-    error:    function(res){ show_error('Keine Verbindung') }
+    error:    function(res){ show_error('No connection') }
   })
 }
 
