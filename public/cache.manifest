@@ -1,5 +1,7 @@
 CACHE MANIFEST
 
+# this list was generated with the following command:
+# git ls-files --full-name | grep -v 'cache.manifest' | sed 's/^public//'
 /font/FontAwesome.otf
 /font/fontawesome-webfont.eot
 /font/fontawesome-webfont.svg
