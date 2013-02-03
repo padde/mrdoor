@@ -7,9 +7,14 @@ set_status = function( status_message ) {
   $('#status').html(status_message)
 }
 
-set_time = function( time ) {
+set_checked = function( time ) {
   $('#checked .easydate').attr('title', time.toUTCString())
-  $('.easydate').easydate()
+  $('#checked .easydate').easydate()
+}
+
+set_since = function( time ) {
+  $('#since .easydate').attr('title', time.toUTCString())
+  $('#since .easydate').easydate()
 }
 
 update_status = function( room ) {
@@ -20,7 +25,8 @@ update_status = function( room ) {
   }
 
   show_error('&nbsp;')
-  set_time( new Date )
+  set_checked( new Date )
+  set_since( new Date( room.lastchange * 1000 ) )
 }
 
 update = function(){

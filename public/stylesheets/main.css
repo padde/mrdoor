@@ -31,6 +31,14 @@ body {
   color: rgba(0,0,0,0.5);
 }
 
+#checked {
+  margin-top: 1em;
+}
+
+#since {
+  font-size: 0.75em;
+}
+
 #update-button {
   margin-top: 2em;
   padding: 0.5em 1em;
