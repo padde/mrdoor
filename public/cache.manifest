@@ -2,11 +2,10 @@ CACHE MANIFEST
 
 # this list was generated with the following command:
 # git ls-files --full-name | grep -v 'cache.manifest' | sed 's/^public//'
-/font/FontAwesome.otf
-/font/fontawesome-webfont.eot
-/font/fontawesome-webfont.svg
-/font/fontawesome-webfont.ttf
-/font/fontawesome-webfont.woff
+/fonts/fontawesome-webfont.afm
+/fonts/fontawesome-webfont.eot
+/fonts/fontawesome-webfont.ttf
+/fonts/fontawesome-webfont.woff
 /images/apple-touch-icon-precomposed.png
 /images/apple-touch-icon-precomposed.psd
 /images/noise.png
@@ -14,7 +13,8 @@ CACHE MANIFEST
 /javascripts/jquery-1.7.1.min.js
 /javascripts/jquery.easydate-0.2.4.min.js
 /javascripts/main.js
-/stylesheets/font-awesome.css
+/stylesheets/font-awesome-custom.css
+/stylesheets/font-awesome-custom.min.css
 /stylesheets/main.css
 /stylesheets/reset.css
 
