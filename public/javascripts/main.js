@@ -43,8 +43,13 @@ update = function() {
 }
 
 lock_portrait = function(e) {
-  var portrait = (window.orientation % 180 == 0)
-  $("body > div").css("-webkit-transform", !portrait ? "rotate(-90deg)" : "")
+  if (window.orientation == 90) {
+    $("body").css('-webkit-transform', 'rotate(-90deg)')
+  } else if (window.orientation == -90) {
+    $("body").css('-webkit-transform', 'rotate(90deg)')
+  } else {
+    $("body").css('-webkit-transform', 'rotate(0deg)')
+  }
 }
 
 $(document).ready(function(){
