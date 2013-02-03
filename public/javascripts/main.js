@@ -44,8 +44,8 @@ update = function() {
 
 $(document).ready(function(){
   // disable scrolling
-  $('body').on('touchmove', false)
-  
+  $(document).on('touchmove', false)
+
   update()
   setInterval(update, 5*60*1000)
 
