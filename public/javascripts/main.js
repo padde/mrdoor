@@ -48,4 +48,6 @@ $(document).ready(function(){
   
   update()
   setInterval(update, 5*60*1000)
+
+  $('#update-button').click(update)
 });
