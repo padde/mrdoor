@@ -9,7 +9,7 @@ CACHE MANIFEST
 # automatically generated string to force reload
 # #{SecureRandom.base64}
 
-#{`git ls-files --full-name public | grep -v '.manifest$' | sed 's/^public//'`.chomp}
+#{`git ls-files --full-name public | grep -v '.manifest$\\|^public\/fonts\/' | sed 's/^public//'`.chomp}
 
 NETWORK:
 *
