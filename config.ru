@@ -1,8 +1,12 @@
 require 'bundler/setup'
-Bundler.require(:default, ENV['RACK_ENV'])
+require 'sinatra'
 
-use Rack::Rewrite do
-  rewrite '/', '/index.html'
+configure :production do
+  require 'newrelic_rpm'
 end
 
-run Rack::Directory.new('public')
+get '/' do 
+  redirect '/index.html'
+end
+
+run Sinatra::Application

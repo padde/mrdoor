@@ -1,7 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'rack'
-gem 'rack-rewrite', :require => 'rack/rewrite'
+gem 'sinatra'
+gem 'thin'
+
+group :production do
+  gem 'newrelic_rpm'
+end
 
 group :development do
   gem 'rake'
