@@ -49,7 +49,7 @@ update = function() {
   jQuery.ajax({
     type:     'GET',
     dataType: 'json',
-    timeout:  1000,
+    timeout:  5000,
     url:      'http://api.maschinenraum.tk/status.json',
     success: function(res){
       update_status(res);
