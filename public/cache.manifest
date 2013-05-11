@@ -1,13 +1,18 @@
 CACHE MANIFEST
 
 # automatically generated string to force reload
-# jopl1tqcv+4XBHWFjsk40w==
+# 4iUfKuTH5BktauhC9FiQzA==
 
 /fonts/fontawesome-webfont.afm
 /fonts/fontawesome-webfont.eot
 /fonts/fontawesome-webfont.ttf
 /fonts/fontawesome-webfont.woff
+/images/apple-touch-icon-precomposed-114x114.png
+/images/apple-touch-icon-precomposed-144x144.png
+/images/apple-touch-icon-precomposed-57x57.png
+/images/apple-touch-icon-precomposed-72x72.png
 /images/apple-touch-icon-precomposed.png
+/images/favicon.ico
 /images/noise.png
 /index.html
 /javascripts/jquery-1.7.1.min.js
