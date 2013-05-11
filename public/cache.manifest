@@ -1,7 +1,8 @@
 CACHE MANIFEST
 
-# this list was generated with the following command:
-# git ls-files --full-name | grep -v 'cache.manifest\|.psd$\|font-awesome-custom.css' | sed 's/^public//'
+# automatically generated string to force reload
+# ytKgdMjlOIiaeVrPY5AMpA==
+
 /fonts/fontawesome-webfont.afm
 /fonts/fontawesome-webfont.eot
 /fonts/fontawesome-webfont.ttf
@@ -12,6 +13,7 @@ CACHE MANIFEST
 /javascripts/jquery-1.7.1.min.js
 /javascripts/jquery.easydate-0.2.4.min.js
 /javascripts/main.js
+/stylesheets/font-awesome-custom.css
 /stylesheets/font-awesome-custom.min.css
 /stylesheets/main.css
 /stylesheets/reset.css
