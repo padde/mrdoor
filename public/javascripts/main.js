@@ -1,6 +1,6 @@
 show_error = function( error_message ) {
   $('#error').html(error_message);
-  $('#update-button i').removeClass('icon-spin')
+  stop_animating_update_button()
 }
 
 set_status = function( status_message ) {
@@ -22,10 +22,29 @@ update_status = function( room ) {
   show_error('&nbsp;')
   set_time('#checked .easydate', new Date )
   set_time('#since .easydate', new Date( room.lastchange * 1000 ) )
+  stop_animating_update_button()
+}
+
+update_button_interval = null;
+update_button_animation_should_stop = false;
+
+animate_update_button = function() {
+  $('#update-button i').addClass('icon-spin')
+  update_button_interval = setInterval(function(){
+    if (update_button_animation_should_stop) {
+      $('#update-button i').removeClass('icon-spin')
+      update_button_animation_should_stop = false;
+      clearInterval(update_button_interval);
+    }
+  }, 1000);
+}
+
+stop_animating_update_button = function() {
+  update_button_animation_should_stop = true;
 }
 
 update = function() {
-  $('#update-button i').addClass('icon-spin')
+  animate_update_button()
 
   jQuery.ajax({
     type:     'GET',
