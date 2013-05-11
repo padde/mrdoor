@@ -1,3 +1,7 @@
+html {
+    -webkit-text-size-adjust: none;
+}
+
 body {
   font: 16px "Lucida Grande", "Helvetica Neue", Helvetica, sans-serif;
   color: rgba(0,0,0,0.9);
