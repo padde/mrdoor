@@ -65,7 +65,11 @@ update = function() {
           $.ajax(ajax_callback);
         }, 500);
       } else {
-        show_error('No connection');
+        if (xhr.status === 500) {
+          show_error('API down');
+        } else {
+          show_error('No connection');
+        }
         stop_animating_update_button();
       }
     }
