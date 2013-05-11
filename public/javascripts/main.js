@@ -1,6 +1,5 @@
 show_error = function( error_message ) {
   $('#error').html(error_message);
-  stop_animating_update_button();
 };
 
 set_status = function( status_message ) {
@@ -19,10 +18,8 @@ update_status = function( room ) {
     set_status('<i class="icon-remove-sign icon-red"></i> closed');
   }
 
-  show_error('&nbsp;');
   set_time('#checked .easydate', new Date);
   set_time('#since .easydate', new Date(room.lastchange * 1000));
-  stop_animating_update_button();
 };
 
 update_button_interval = null;
@@ -47,15 +44,30 @@ update = function() {
   animate_update_button();
 
   jQuery.ajax({
-    type:     'GET',
-    dataType: 'json',
-    timeout:  5000,
-    url:      'http://api.maschinenraum.tk/status.json',
+    type:       'GET',
+    dataType:   'json',
+    timeout:    1000,
+    retryCount: 0,
+    retryLimit: 5,
+    url:        'http://api.maschinenraum.tk/status.json',
     success: function(res){
+      show_error('&nbsp;');
       update_status(res);
+      stop_animating_update_button();
     },
-    error: function(res){
-      show_error('No connection');
+    error: function(xhr, textStatus, errorThrown){
+      this.retryCount++;
+      this.timeout *= 2;
+      if (this.retryCount <= this.retryLimit) {
+        show_error('Retrying… '+this.retryCount+'/'+this.retryLimit);
+        var ajax_callback = this;
+        setTimeout(function(){
+          $.ajax(ajax_callback);
+        }, 500);
+      } else {
+        show_error('No connection');
+        stop_animating_update_button();
+      }
     }
   })
 }
