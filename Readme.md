@@ -10,5 +10,8 @@ You’re encouraged to [add the app to your homescreen](http://www.apple.com/ios
 which will give you the look and feel of a native app.
 
 <p align="center">
+  <img src="artwork/Icon.png" alt="Icon" />
+</p>
+<p align="center">
   <img src="doc/screenshot.png" alt="Screenshot" />
 </p>
