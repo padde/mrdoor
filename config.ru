@@ -1,11 +1,8 @@
 $:.unshift File.expand_path(File.dirname(__FILE__))
 
 require 'bundler/setup'
-require 'sinatra'
+Bundler.require(:default, ENV['RACK_ENV'])
 
 require 'app'
-
-require 'newrelic_rpm'
-NewRelic::Agent.after_fork(:force_reconnect => true)
 
 run App.new
