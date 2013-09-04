@@ -49,7 +49,7 @@ update = function() {
     timeout:    1000,
     retryCount: 0,
     retryLimit: 5,
-    url:        'http://api.maschinenraum.tk/status.json',
+    url:        'http://mr-spaceapi.herokuapp.com/api/v0_12/status.json',
     success: function(res){
       show_error('&nbsp;');
       update_status(res);
