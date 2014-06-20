@@ -7,9 +7,9 @@ task :cache do
 CACHE MANIFEST
 
 # automatically generated string to force reload
-# #{SecureRandom.base64}
+# #{SecureRandom.hex(8)}
 
-#{`git ls-files --full-name public | grep -v '.manifest$\\|^public\/fonts\/' | sed 's/^public//'`.chomp}
+#{`git ls-files --full-name public | sed 's/^public//' | grep -v 'cache.manifest' | grep -v '^\/fonts'`.chomp}
 
 NETWORK:
 *
