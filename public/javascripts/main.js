@@ -59,16 +59,16 @@ update = function() {
       this.retryCount++;
       this.timeout *= 2;
       if (this.retryCount <= this.retryLimit) {
-        show_error('Retrying… '+this.retryCount+'/'+this.retryLimit);
+        show_error('<i class="retry-icon fa fa-flash"></i> Retrying');
         var ajax_callback = this;
         setTimeout(function(){
           $.ajax(ajax_callback);
         }, 500);
       } else {
         if (xhr.status === 500) {
-          show_error('API down');
+          show_error('<i class="fa fa-times-circle fa-red"></i> API down');
         } else {
-          show_error('No connection');
+          show_error('<i class="fa fa-warning fa-yellow"></i> No connection');
         }
         stop_animating_update_button();
       }
