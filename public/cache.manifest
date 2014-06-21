@@ -1,8 +1,13 @@
 CACHE MANIFEST
 
 # automatically generated string to force reload
-# b7f2767f4eb4650c
+# cc899ae741a7f17f
 
+/fonts/FontAwesome.otf
+/fonts/fontawesome-webfont.eot
+/fonts/fontawesome-webfont.svg
+/fonts/fontawesome-webfont.ttf
+/fonts/fontawesome-webfont.woff
 /images/apple-touch-icon-114x114.png
 /images/apple-touch-icon-120x120.png
 /images/apple-touch-icon-144x144.png
@@ -30,7 +35,7 @@ CACHE MANIFEST
 /javascripts/jquery-1.7.1.min.js
 /javascripts/jquery.easydate-0.2.4.min.js
 /javascripts/main.js
-/stylesheets/font-awesome-custom.css
+/stylesheets/font-awesome.min.css
 /stylesheets/main.css
 /stylesheets/reset.css
 
