@@ -84,4 +84,10 @@ $(document).ready(function(){
   setInterval(update, 5*60*1000);
 
   $('#update-button').click(update);
+
+  // open links in mobile safari, not in app
+  $('a').click(function(){
+    window.location = $(this).attr('href');
+    return false;
+  });
 });
