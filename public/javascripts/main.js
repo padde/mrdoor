@@ -86,8 +86,5 @@ $(document).ready(function(){
   $('#update-button').click(update);
 
   // open links in mobile safari, not in app
-  $('a').click(function(){
-    window.location = $(this).attr('href');
-    return false;
-  });
+  $('#extra a').attr('target', '_blank');
 });
