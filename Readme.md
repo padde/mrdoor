@@ -1,4 +1,4 @@
-<img src="artwork/Icon.png" alt="Icon" width="30"/> MR Door
+<img src="artwork/Icon.png" alt="Icon" width="29"/> MR Door
 =======
 
 <p align="center">http://mrdoor.paddd.de</p>
