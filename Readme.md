@@ -1,10 +1,11 @@
 <img src="artwork/Icon.png" alt="Icon" width="30"/> MR Door
 =======
 
+<p align="center">http://mrdoor.paddd.de</p>
+
 MR Door is a tiny web app that allows you to check the status of the
 [twittering Maschinenraum door](https://twitter.com/intent/user?screen_name=mr_door_status).
 Maschinenraum is a [Hackerspace based in Weimar, Germany](http://maschinenraum.tk).
-There’s a publicly hosted version available at [mrdoor.paddd.de](http://mrdoor.paddd.de)
 
 You can [add the app to your homescreen](http://support.apple.com/kb/ti42)
 which will give you the look and feel of a native app.
