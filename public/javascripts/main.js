@@ -13,9 +13,9 @@ set_time = function( selector, time ) {
 
 update_status = function( room ) {
   if ( room.open ) {
-    set_status('<i class="icon-ok-sign icon-green"></i> open');
+    set_status('<i class="fa fa-check fa-green"></i> open');
   } else {
-    set_status('<i class="icon-remove-sign icon-red"></i> closed');
+    set_status('<i class="fa fa-times fa-red"></i> closed');
   }
 
   set_time('#checked .easydate', new Date);
@@ -26,10 +26,10 @@ update_button_interval = null;
 update_button_animation_should_stop = false;
 
 animate_update_button = function() {
-  $('#update-button i').addClass('icon-spin');
+  $('#update-button i').addClass('fa-spin');
   update_button_interval = setInterval(function(){
     if (update_button_animation_should_stop) {
-      $('#update-button i').removeClass('icon-spin');
+      $('#update-button i').removeClass('fa-spin');
       update_button_animation_should_stop = false;
       clearInterval(update_button_interval);
     }
