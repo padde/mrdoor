@@ -16,3 +16,14 @@ NETWORK:
     EOS
   end
 end
+
+desc 'Generate font awesome css file'
+task :font do
+  require 'erb'
+  require 'base64'
+  template = File.read('templates/font-awesome.min.css.erb')
+  base64_svg_font = Base64.strict_encode64(File.read('public/fonts/fontawesome-webfont.svg'))
+  File.open('public/stylesheets/font-awesome.min.css', 'w') do |f|
+    f.write ERB.new(template).result(binding)
+  end
+end
