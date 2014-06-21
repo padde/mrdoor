@@ -1,4 +1,4 @@
-MR Door
+<img src="artwork/Icon.png" alt="Icon" width="30"/> MR Door
 =======
 
 MR Door is a tiny web app that allows you to check the status of the
@@ -6,15 +6,8 @@ MR Door is a tiny web app that allows you to check the status of the
 Maschinenraum is a [Hackerspace based in Weimar, Germany](http://maschinenraum.tk).
 There’s a publicly hosted version available at [mrdoor.paddd.de](http://mrdoor.paddd.de)
 
-You’re encouraged to [add the app to your homescreen](http://www.apple.com/ios/add-to-home-screen/)
+You can [add the app to your homescreen](http://www.apple.com/ios/add-to-home-screen/)
 which will give you the look and feel of a native app.
-
-<p align="center">
-  <img src="artwork/Icon.png" alt="Icon" width="150"/>
-</p>
-<p align="center">
-  <img src="doc/screenshot.png" alt="Screenshot" />
-</p>
 
 License
 -------
